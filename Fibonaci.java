@@ -21,7 +21,6 @@ public class Fibonaci {
             }
             int result = getFibo(num);
             System.out.println("结果为：" + result);
-
         }
 
         static public int getFibo(int n) {
@@ -49,7 +48,6 @@ public class Fibonaci {
                 int result = getFibo1(i);
                 System.out.print(result + "，");
             }
-
         }
 
         static public int getFibo1(int n) {
