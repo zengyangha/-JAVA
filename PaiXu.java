@@ -2,7 +2,6 @@ package demo_test;
 
 public class PaiXu {
 
-
     //冒泡排序
     static public class Array1 {
         public static void main(String[] args) {
@@ -42,9 +41,6 @@ public class PaiXu {
             for (int j : arr) {
                 System.out.print(j + "\t");
             }
-
         }
     }
-
-
 }
