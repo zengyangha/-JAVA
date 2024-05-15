@@ -6,7 +6,7 @@ import java.io.IOException;
 public class FileDemo {
     public static void main(String[] args) throws IOException {
 
-        File file = new File("abc.txt");
+        File file = new File("aaa.txt");
         File file2 = new File("src/abc.txt");
 
         try {
@@ -47,6 +47,7 @@ public class FileDemo {
         System.out.println("----------------");
         System.out.println();
 
+
         File file3 = new File("c:/");
 
         String[] list = file3.list();
@@ -77,7 +78,23 @@ public class FileDemo {
         //创建多级目录
         file4.mkdirs();
 
+        System.out.println("----------------");
+        System.out.println();
 
+        System.out.println("遍历文件");
+printFile(new File("C:\\dasan"));
 
     }
+
+
+    //递归方法遍历文件
+    public static void printFile(File file){
+        if (file.isDirectory()){
+            File[] files = file.listFiles();
+            for(File f:files){
+                printFile(f);
+            }
+        }else System.out.println(file.getAbsolutePath());
+    }
+
 }
