@@ -1,9 +1,6 @@
 package com.IODemo;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 
 public class CopeFeil {
     //将abc中的数据复制到aaa中
@@ -20,8 +17,13 @@ public class CopeFeil {
             FileInputStream fileInputStream = new FileInputStream(src);
             FileOutputStream fileOutputStream = new FileOutputStream(dest);
 
+            byte[] buffer = new byte[10];
+            while ((fileInputStream.read(buffer)!=-1)){
+                fileOutputStream.write(buffer);
+            }
 
-        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
