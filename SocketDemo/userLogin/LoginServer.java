@@ -14,10 +14,10 @@ public class LoginServer {
 
         Socket socket = serverSocket.accept();
         //输入流对象
-        InputStream inputStream = socket.getInputStream();
+//        InputStream inputStream = socket.getInputStream();
         ////接受对象要objectOutputStream
-        ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
-        User user = (User) objectInputStream.readObject();
+        ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+        User user = (User) objectInputStream.readObject();//反序列号
 
         String str = "";
 
@@ -38,7 +38,7 @@ public class LoginServer {
         //关闭操作
         dataOutputStream.close();
         objectInputStream.close();
-        inputStream.close();
+//        inputStream.close();
         socket.close();
         serverSocket.close();
 

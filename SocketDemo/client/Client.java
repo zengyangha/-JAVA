@@ -1,8 +1,6 @@
 package SocketDemo.client;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class Client {
@@ -17,7 +15,18 @@ public class Client {
         DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
         //传输数据
         dataOutputStream.writeUTF("hello!!!!!!!!!!");
+
+        //接受服务端消息：
+        InputStream inputStream = socket.getInputStream();
+
+        DataInputStream dataInputStream = new DataInputStream(inputStream);
+        String str=dataInputStream.readUTF();
+
+        System.out.println("接受到服务端的消息为："+str);
+
         //关闭相关操作：
+        dataInputStream.close();
+        inputStream.close();
         dataOutputStream.close();
         outputStream.close();
         socket.close();

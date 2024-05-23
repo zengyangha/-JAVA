@@ -18,7 +18,7 @@ public class LoginClient {
         User user = getUser();
         //传输对象要objectOutputStream
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
-        objectOutputStream.writeObject(user);
+        objectOutputStream.writeObject(user);//将对象序列号
         //传输结束标志
         socket.shutdownOutput();
 

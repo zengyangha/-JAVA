@@ -1,9 +1,6 @@
 package SocketDemo.server;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -19,8 +16,17 @@ public class Server {
         DataInputStream dataInputStream = new DataInputStream(inputStream);
         //读取对应数据
         String str = dataInputStream.readUTF();
-        System.out.println(str);
+        System.out.println("接收到客户端的消息为："+str);
+
+        //给予客户端响应
+        OutputStream outputStream = socket.getOutputStream();
+
+        DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
+        dataOutputStream.writeUTF("hi!!!!!");
+
+
         //关闭相关操作
+        dataOutputStream.close();
         dataInputStream.close();
         inputStream.close();
         socket.close();

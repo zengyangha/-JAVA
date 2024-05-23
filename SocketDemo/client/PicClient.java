@@ -14,8 +14,8 @@ public class PicClient {
         OutputStream outputStream = socket.getOutputStream();
         //输出图片
         int temp=0;
-        while ((temp= fileInputStream.read())!=-1){
-            outputStream.write(temp);
+        while ((temp= fileInputStream.read())!=-1){//从文件输入流中读取一个字节，并返回一个 int 类型的值。
+            outputStream.write(temp);//由于 read() 方法返回 int 类型，为了避免符号扩展的问题，将字节值提升为 int 类型
         }
         //结束标志
         socket.shutdownOutput();

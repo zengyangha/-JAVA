@@ -13,7 +13,8 @@ public class Client2 {
         //创建输出流对象
         OutputStream outputStream = socket.getOutputStream();
         //数据输出
-        outputStream.write("这是来自客户端的消息".getBytes());//不封装就得写字节数据
+        outputStream.write("这是来自客户端的消息".getBytes());//不封装就得将字符串转换为字节数组
+
 //接受服务器的数据
         //创建输入流对象
         InputStream inputStream = socket.getInputStream();

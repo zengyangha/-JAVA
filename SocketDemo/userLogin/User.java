@@ -34,9 +34,5 @@ public class User implements Serializable {
     public User() {
     }
 
-    public static void main(String[] args) {
 
-
-
-    }
 }
