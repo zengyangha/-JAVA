@@ -2,7 +2,7 @@ package LambdaTest;
 
 import java.util.ArrayList;
 
-        //不使用AgeFilter和ScoreFilter，有新需求时不再需要创建一个接口类
+//与test2相比，不使用AgeFilter和ScoreFilter，有新需求时不再需要创建一个实现类，直接使用匿名内部类来实现接口
 public class Test3 {
     public static void main(String[] args) {
         ArrayList<Student> list = new ArrayList<>();

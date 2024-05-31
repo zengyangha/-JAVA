@@ -12,7 +12,7 @@ public class Test4 {
         list.add(new Student("laoliu", 66, 88));
         list.add(new Student("xiaoqi", 88, 11));
 
-        getByFilter(list, (e) -> e.getScore() > 50);
+        getByFilter(list, (e) -> e.getScore() > 50);//e是参数传递
         System.out.println("------------------");
         getByFilter(list, (e) -> e.getName().length()<5);
         System.out.println("------------------");
