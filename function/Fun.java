@@ -6,9 +6,6 @@ public class Fun {
         return "point";
     }
 
-    public Integer fun(String s){
-        return 1;
-    }
 
     public void ffff(){
         System.out.println("funny");

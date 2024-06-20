@@ -6,7 +6,7 @@ public class Fun2 {
     }
 
     public void show(String str){
-        System.out.println("fun2 --show"+str);
+        System.out.println("fun2 --show:"+"     "+str);
     }
 
 }
