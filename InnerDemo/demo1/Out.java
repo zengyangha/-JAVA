@@ -7,10 +7,13 @@ public class Out {
 
     public class Inner{
         private String name="潘金莲";
-
+        private int age=20;
 
         public void show(){
             System.out.println(name);  //外部类和内部类属性同名时，就近原则
+            System.out.println(Out.this.age);
+            System.out.println("----");
+            System.out.println(Out.this.name);
             System.out.println(age);
         }
     }
